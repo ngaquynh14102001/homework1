@@ -32,7 +32,7 @@ export class ProductPage extends DashBoard {
         await this.btnAddVariantn.click();
         await this.variantOption.fill(product.option.name);
         const joinProductOptions = product.option.values.join(",");
-        await this.variantOptionValues.fill(joinProductOptions); 
+        await this.variantOptionValues.fill(joinProductOptions);
         await this.btnSaveChanges.click();
         await this.page.waitForTimeout(5 * 1000);
     }
@@ -75,5 +75,5 @@ export class ProductPage extends DashBoard {
         await this.page.waitForTimeout(5 * 1000);
     }
 
-    
+
 }

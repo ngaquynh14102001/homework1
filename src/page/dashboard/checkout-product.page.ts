@@ -1,7 +1,7 @@
 import { Locator, Page, expect } from "@playwright/test";
 import { DiscountPage } from "./discount.page";
 
-export class CheckOutProductPage{
+export class CheckOutProductPage {
     page: Page;
     btnBuyNow: Locator;
 
@@ -17,7 +17,7 @@ export class CheckOutProductPage{
     inputDiscountCode: Locator;
     btnApply: Locator;
     btnCountinueToShip: Locator;
-    
+
     btnCountinuePayment: Locator;
     inputCardNumber: Locator;
     inputCardholder: Locator;
@@ -25,7 +25,7 @@ export class CheckOutProductPage{
     inputCVV: Locator;
     btnCompleteOrder: Locator;
 
-    constructor(page:Page){
+    constructor(page: Page) {
         this.page = page;
         this.btnBuyNow = page.locator("//span[normalize-space()='Buy Now']");
 
@@ -49,7 +49,7 @@ export class CheckOutProductPage{
         this.inputCVV = page.locator('//div[@class="fieldset stripe-form test-gateway"]').frameLocator("//div[@id='stripe-card-cvc']//iframe").locator('[placeholder="CVV"]');
         this.btnCompleteOrder = page.locator("//button[@class='s-button step__continue-button']");
     }
-    async buyProduct(){
+    async buyProduct() {
         await this.page.goto("https://16-clothing.onshopbase.com/collections/mobile-phone/products/iphone-14-pro-max-128gb-nga-4");
         await this.page.waitForTimeout(3 * 1000);
 
@@ -57,7 +57,7 @@ export class CheckOutProductPage{
         await this.page.waitForTimeout(3 * 1000);
 
     }
-    async fillInfo(){
+    async fillInfo() {
         await this.inputEmail.fill("ngaquynh141001@gmail.com");
         await this.inputFirstName.fill("ABC");
         await this.inputLastName.fill("EFG");
@@ -73,13 +73,13 @@ export class CheckOutProductPage{
         await this.page.waitForTimeout(3 * 1000);
 
     }
-    async fillShipping(){
-        await  this.btnCountinuePayment.click();
+    async fillShipping() {
+        await this.btnCountinuePayment.click();
         await this.page.waitForTimeout(3 * 1000);
 
 
     }
-    async fillPayment(){
+    async fillPayment() {
         await this.inputCardNumber.fill("4242424242424242");
         await this.inputCardholder.fill("Nga Quynh");
         await this.inputMMYY.fill("0326");
@@ -89,4 +89,4 @@ export class CheckOutProductPage{
 
     }
 }
-    
+

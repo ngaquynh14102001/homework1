@@ -33,7 +33,7 @@ const test = base.extend<{
         //after
         await createCollectionPage.navigateToMenu("Products")
         await createCollectionPage.navigateToMenu("Collections");
-        await createCollectionPage.page.waitForTimeout(3*1000);
+        await createCollectionPage.page.waitForTimeout(3 * 1000);
         await createCollectionPage.deleteCollection();
     }
 })

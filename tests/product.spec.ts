@@ -25,8 +25,8 @@ test('test_addproduct', async ({ productPage, context }) => {
             }
         }
         //Create product
-            await productPage.createProduct(product);
-        
+        await productPage.createProduct(product);
+
     })
     //Verify new product
     await test.step('Verify new product', async () => {

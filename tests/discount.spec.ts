@@ -1,10 +1,10 @@
 
 import { DiscountPage } from "../src/page/dashboard/discount.page";
 import { CreateDiscountCodePage } from "../src/page/dashboard/discount-child.page";
-import { CheckOutProductPage} from "../src/page/dashboard/checkout-product.page";
+import { CheckOutProductPage } from "../src/page/dashboard/checkout-product.page";
 import { test } from "../src/fixtures/discount.fixture";
 
-test('test_create_discountcode', async ({discountPage, createDiscountCodePage, checkoutProductPage, context }) => {
+test('test_create_discountcode', async ({ discountPage, createDiscountCodePage, checkoutProductPage, context }) => {
     await test.step('Click button Create Discount', async () => {
         await discountPage.clickBtnCreateDiscount();
         await discountPage.page.waitForTimeout(3 * 1000);

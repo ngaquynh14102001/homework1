@@ -2,7 +2,7 @@ import { test as base, expect } from "@playwright/test";
 import { LoginPage } from "../page/authentication/login.page";
 import { ProductPage } from "../page/dashboard/product.page";
 
-const test = base.extend<{ productPage: ProductPage}>({
+const test = base.extend<{ productPage: ProductPage }>({
     productPage: async ({ page }, use) => { //khai báo tên fixture
         //Login vào dashboard
 

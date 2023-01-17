@@ -18,6 +18,6 @@ export class CollectionPage extends DashBoard {
         await this.page.click("//span[normalize-space()='Create collection']");
         await this.page.waitForTimeout(5 * 1000);
     }
-    
-   
+
+
 }

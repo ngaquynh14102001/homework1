@@ -3,13 +3,13 @@ import { LoginPage } from "../authentication/login.page";
 import { DashBoard } from "./dashboard.page";
 
 export class DiscountPage extends DashBoard {
-    constructor(page:Page){
+    constructor(page: Page) {
         super(page);
     }
 
-    async clickBtnCreateDiscount(){
+    async clickBtnCreateDiscount() {
         await this.page.click("//span[normalize-space()='Create discount']");
         await this.page.waitForTimeout(5 * 1000);
     }
-    
+
 }

@@ -36,12 +36,12 @@ export class CreateDiscountCodePage extends DiscountPage {
         await this.radioSpecificProducts.click();
         await this.btnBrowse.click();
         await this.inputSearchProducts.fill("iPhone 14 Pro Max 128GB - Nga");
-        await this.page.waitForTimeout(3*1000);
+        await this.page.waitForTimeout(3 * 1000);
         await this.checkboxProductDiscount.click();
         await this.btnSaveSelectProducts.click();
-        await this.page.waitForTimeout(3*1000);
+        await this.page.waitForTimeout(3 * 1000);
         await this.btnSaveChanges.click();
-        await this.page.waitForTimeout(3*1000);
+        await this.page.waitForTimeout(3 * 1000);
 
 
     }

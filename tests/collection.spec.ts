@@ -17,7 +17,7 @@ test('test_create_collections', async ({ collectionPage, createCollectionPage, c
     await test.step('Add Product to Collection', async () => {
         await createCollectionPage.addProductToCollection();
         await createCollectionPage.page.waitForTimeout(3 * 1000);
-        
+
     })
     //--------------------------------------------------------------------------------------------------
     //Verify collection
